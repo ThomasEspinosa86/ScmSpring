@@ -1,4 +1,4 @@
-package Dto;
+package com.example.demo.Dto;
 
 import lombok.Data;
 import java.util.Date;

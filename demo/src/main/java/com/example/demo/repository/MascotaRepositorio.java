@@ -1,8 +1,11 @@
 package com.example.demo.repository;
 
-import modelo.Mascota;
+import com.example.demo.modelo.Mascota;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MascotaRepositorio extends JpaRepository<Mascota, Long> {
-    Mascota FindById (int idM);
+
+@Repository
+public interface MascotaRepositorio extends JpaRepository<Mascota, Integer> {
+    Mascota findByNombre(String nombre);
 }

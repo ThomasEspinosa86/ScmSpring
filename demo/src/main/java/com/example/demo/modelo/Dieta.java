@@ -1,18 +1,17 @@
-package modelo;
+package com.example.demo.modelo;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.util.Date;
 
 @Entity
-@Table(name = "diagnosticodueno")
+@Table(name = "dieta")
 @Data
-public class DiagnosticoDueno {
+public class Dieta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdD")
-    private Integer idD;
+    @Column(name = "IdDi")
+    private Integer idDi;
 
     @ManyToOne
     @JoinColumn(name = "IdM", referencedColumnName = "IdM")
@@ -22,9 +21,9 @@ public class DiagnosticoDueno {
     @JoinColumn(name = "IdV", referencedColumnName = "IdV")
     private Veterinario veterinario;
 
-    @Column(name = "FechaDiagnostico")
-    private Date fechaDiagnostico;
+    @Column(name = "Descripcion")
+    private String descripcion;
 
-    @Column(name = "Observaciones")
-    private String observaciones;
+    @Column(name = "TipoDieta")
+    private String tipoDieta;
 }

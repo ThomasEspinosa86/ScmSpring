@@ -1,8 +1,12 @@
 package com.example.demo.repository;
 
-import modelo.Dieta;
+import com.example.demo.modelo.Dieta;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface DietaRepositorio extends JpaRepository<Dieta, Long> {
-    Dieta FindById(int idDi);
+import java.util.List;
+
+@Repository
+public interface DietaRepositorio extends JpaRepository<Dieta, Integer> {
+    List<Dieta> findByTipoDieta(String tipoDieta);
 }

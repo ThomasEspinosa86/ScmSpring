@@ -1,8 +1,12 @@
 package com.example.demo.repository;
 
-import modelo.Veterinario;
+import com.example.demo.modelo.Veterinario;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
-public interface VeterinarioRepositorio extends JpaRepository<Veterinario, Long> {
-    Veterinario FindById(int IdV);
+
+@Repository
+public interface VeterinarioRepositorio extends JpaRepository<Veterinario, Integer> {
+    List<Veterinario> findByEspecialidad(String especialidad);
 }

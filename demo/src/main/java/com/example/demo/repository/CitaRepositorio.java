@@ -1,8 +1,11 @@
 package com.example.demo.repository;
 
-import modelo.Cita;
+import com.example.demo.modelo.Cita;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import java.util.List;
 
-public interface CitaRepositorio extends JpaRepository<Cita, Long> {
-    Cita FindById(int idC);
+@Repository
+public interface CitaRepositorio extends JpaRepository<Cita, Integer> {
+    List<Cita> findByEstadoCita(String estado);
 }

@@ -1,4 +1,4 @@
-package Dto;
+package com.example.demo.Dto;
 
 import lombok.Data;
 
@@ -10,4 +10,5 @@ public class UsuarioDTO {
     private String telefono;
     private String direccion;
     private Integer idRol;
+    private String contrasena; // Corrected type to String
 }

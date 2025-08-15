@@ -1,4 +1,4 @@
-package modelo;
+package com.example.demo.modelo;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -6,7 +6,7 @@ import lombok.Data;
 @Entity
 @Table(name = "actividadfisica")
 @Data
-public class ActividadFisica {
+public class        ActividadFisica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
